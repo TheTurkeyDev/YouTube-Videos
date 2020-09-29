@@ -27,6 +27,11 @@ public class MazeGenerator extends Canvas
 	public void paint(Graphics g)
 	{
 		super.paint(g);
+
+		g.setColor(Color.DARK_GRAY);
+		g.fillRect(0, 0, WIDTH * TILE_WIDTH, HEIGHT * TILE_HEIGHT);
+		g.setColor(Color.LIGHT_GRAY);
+
 		g.drawLine(0, 0, 0, HEIGHT * TILE_HEIGHT);
 		g.drawLine(0, 0, WIDTH * TILE_WIDTH, 0);
 		g.drawLine(WIDTH * TILE_WIDTH, 0, WIDTH * TILE_WIDTH, HEIGHT * TILE_HEIGHT);
@@ -52,7 +57,7 @@ public class MazeGenerator extends Canvas
 				{
 					g.setColor(colors.get(new Vector2I(x, y)));
 					g.fillRect(x * TILE_WIDTH, y * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT);
-					g.setColor(Color.BLACK);
+					g.setColor(Color.LIGHT_GRAY);
 				}
 			}
 		}
@@ -63,7 +68,7 @@ public class MazeGenerator extends Canvas
 		List<Integer> visited = new ArrayList<>();
 		List<Vector2I> toVisit = new ArrayList<>();
 
-		loadImageIn(visited, "merry_christmas.png");
+		loadImageIn(visited, "tree.png");
 
 		visited.add(0);
 		toVisit.add(new Vector2I(0, 1));

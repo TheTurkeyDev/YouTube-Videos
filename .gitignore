@@ -6,3 +6,7 @@ PublicTrelloFinder/.classpath
 PublicTrelloFinder/.project
 PublicTrelloFinder/.settings/org.eclipse.jdt.core.prefs
 */bin/*
+PublicTrelloFinder/.idea/
+YouTube-Video-Generator/.idea/
+YouTube-Video-Generator/venv/
+PublicTrelloFinder/classes/
